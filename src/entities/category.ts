@@ -25,7 +25,7 @@ export class CategoryEntity {
   @IsString()
   title_ru: string;
 
-  @Column({ type: "varchar" })
+  @Column({ type: "varchar",nullable:true })
   @IsString()
   image: string;
 

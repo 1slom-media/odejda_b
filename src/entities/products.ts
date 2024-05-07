@@ -50,25 +50,13 @@ export class ProductsEntity {
   @IsString()
   text_en: string;
 
-  @Column({ type: "varchar" })
+  @Column({ type: "varchar",array:true,nullable:true })
   @IsString()
-  size: string;
+  size: string[];
 
-  @Column({ type: "varchar" })
+  @Column({ type: "varchar",array:true,nullable:true })
   @IsString()
-  image1: string;
-
-  @Column({ type: "varchar" })
-  @IsString()
-  image2: string;
-
-  @Column({ type: "varchar" })
-  @IsString()
-  image3: string;
-
-  @Column({ type: "varchar" })
-  @IsString()
-  image4: string;
+  image: string[];
 
   @CreateDateColumn({ type: "timestamp" })
   createdAt: Date;
